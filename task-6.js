@@ -10,24 +10,10 @@ let total = 0;
 
 do {
   input = prompt('Введи число');
-  if (Number(input)) {
-    input = Number(input);
-    total += Number(input);
+  if (isNaN(input)) {
+    alert('Введите именно число!');
   } else {
-    Number.isNaN(input);
-    alert('Введите число!');
+    total += Number(input);
   }
-
-  //   else {
-  //     input = Number(input);
-  //     total += Number(input);
-  //   }
-
-  //   if (Number.isNaN(input)) {
-  //     alert('Введите число!');
-  //   } else {
-  //     input = Number(input);
-  //     total += Number(input);
-  //   }
 } while (input !== null);
 alert(`Общая сумма введенных чисел ${total}`);
